@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Untermyer Gardens — Engagement Photography Map</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f2ec;
+      color: #1a1a18;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 32px 16px 48px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 24px;
+      max-width: 720px;
+      width: 100%;
+    }
+    header h1 {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      color: #1a1a18;
+      margin-bottom: 4px;
+    }
+    header p {
+      font-size: 14px;
+      color: #666;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #e0dcd4;
+      padding: 20px;
+      max-width: 720px;
+      width: 100%;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .legend {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-size: 12px;
+      color: #888;
+    }
+    .legend-items { display: flex; gap: 16px; }
+    .legend-dot {
+      width: 11px; height: 11px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+    .mrkr { cursor: pointer; transition: transform 0.15s; transform-origin: center; }
+    .mrkr:hover { transform: scale(1.18); }
+    svg { border-radius: 10px; display: block; overflow: hidden; }
+    #infobox {
+      margin-top: 12px;
+      background: #f9f7f3;
+      border: 1px solid #e8e4dc;
+      border-radius: 12px;
+      padding: 16px 18px;
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      transition: background 0.2s;
+    }
+    .spot-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 9px;
+    }
+    .spot-title { font-size: 14px; font-weight: 600; color: #1a1a18; }
+    .spot-badge {
+      margin-left: auto;
+      font-size: 11px;
+      padding: 2px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .badge-photo { background: #d0f0e8; color: #0d5e50; }
+    .badge-egg   { background: #fce8c8; color: #8a4210; }
+    .spot-tip { font-size: 13px; color: #2a2a28; margin: 0 0 10px; line-height: 1.6; }
+    .spot-bonus {
+      font-size: 12px;
+      color: #666;
+      padding: 8px 11px;
+      background: white;
+      border-radius: 8px;
+      line-height: 1.5;
+    }
+    .spot-bonus.teal { border-left: 3px solid #1e8a78; }
+    .spot-bonus.amber { border-left: 3px solid #c87820; }
+    footer {
+      margin-top: 20px;
+      font-size: 11px;
+      color: #aaa;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Untermyer Gardens — Engagement Photography Map</h1>
+    <p>8 photo spots + 2 hidden easter eggs · Yonkers, NY · Open daily 9am–6pm · Free</p>
+  </header>
+
+  <div class="card">
+    <div class="legend">
+      <span style="font-style:italic;color:#aaa;">Tap a marker to explore</span>
+      <span class="legend-items">
+        <span><span class="legend-dot" style="background:#1e8a78;"></span>Photo spot</span>
+        <span><span class="legend-dot" style="background:#c87820;"></span>Easter egg</span>
+      </span>
+    </div>
+
+    <svg width="100%" viewBox="0 0 680 490" role="img">
+      <title>Untermyer Gardens engagement photography map</title>
+      <desc>Bird's-eye illustrated map of Untermyer Gardens with 8 photography spots and 2 easter egg locations marked</desc>
+      <defs>
+        <marker id="garr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+          <path d="M2 1L8 5L2 9" fill="none" stroke="#8c6840" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </marker>
+      </defs>
+
+      <rect width="680" height="490" fill="#dff0c8"/>
+
+      <!-- Hudson River -->
+      <rect x="0" y="0" width="76" height="490" fill="#5a9ec8"/>
+      <line x1="14" y1="90"  x2="64" y2="90"  stroke="#4080a8" stroke-width="0.7" opacity="0.5"/>
+      <line x1="10" y1="145" x2="68" y2="145" stroke="#4080a8" stroke-width="0.7" opacity="0.5"/>
+      <line x1="16" y1="200" x2="62" y2="200" stroke="#4080a8" stroke-width="0.7" opacity="0.5"/>
+      <line x1="10" y1="255" x2="68" y2="255" stroke="#4080a8" stroke-width="0.7" opacity="0.5"/>
+      <line x1="14" y1="310" x2="64" y2="310" stroke="#4080a8" stroke-width="0.7" opacity="0.5"/>
+      <line x1="10" y1="365" x2="68" y2="365" stroke="#4080a8" stroke-width="0.7" opacity="0.5"/>
+      <line x1="14" y1="420" x2="64" y2="420" stroke="#4080a8" stroke-width="0.7" opacity="0.5"/>
+      <text x="38" y="260" text-anchor="middle" font-size="9" fill="#1a4a78" font-family="sans-serif" transform="rotate(-90,38,260)" opacity="0.85">Hudson River</text>
+
+      <!-- Main garden -->
+      <rect x="76" y="0" width="604" height="490" fill="#93c760"/>
+      <ellipse cx="370" cy="415" rx="165" ry="62" fill="#b0da78" opacity="0.6"/>
+      <ellipse cx="200" cy="120" rx="110" ry="60" fill="#aadc70" opacity="0.45"/>
+      <ellipse cx="560" cy="78"  rx="88" ry="54"  fill="#4c8825" opacity="0.78"/>
+      <ellipse cx="598" cy="92"  rx="52" ry="34"  fill="#3c7018" opacity="0.65"/>
+      <ellipse cx="148" cy="445" rx="58" ry="34"  fill="#4c8825" opacity="0.72"/>
+      <ellipse cx="542" cy="444" rx="76" ry="40"  fill="#4c8825" opacity="0.72"/>
+      <ellipse cx="620" cy="395" rx="44" ry="30"  fill="#3c7018" opacity="0.62"/>
+      <circle  cx="308" cy="444" r="17" fill="#4c8825" opacity="0.6"/>
+      <circle  cx="415" cy="445" r="14" fill="#3c7018" opacity="0.6"/>
+
+      <!-- Paths -->
+      <rect x="76"  y="236" width="604" height="18" fill="#d0bc8c" opacity="0.92"/>
+      <rect x="348" y="0"   width="16"  height="490" fill="#d0bc8c" opacity="0.82"/>
+      <path d="M196,215 C162,215 142,208 124,225" stroke="#d0bc8c" stroke-width="11" fill="none" stroke-linecap="round"/>
+      <path d="M152,315 C128,338 108,358 98,382"  stroke="#d0bc8c" stroke-width="10" fill="none" stroke-linecap="round"/>
+      <rect x="190" y="368" width="12" height="88" fill="#d0bc8c" opacity="0.85"/>
+      <path d="M578,245 C600,245 618,247 635,245" stroke="#d0bc8c" stroke-width="16" fill="none" stroke-linecap="round"/>
+
+      <!-- Walled Garden -->
+      <rect x="194" y="150" width="265" height="196" rx="6" fill="none" stroke="#60a8d0" stroke-width="6" opacity="0.32"/>
+      <rect x="202" y="158" width="250" height="182" rx="4" fill="#c0de90" stroke="#8a6438" stroke-width="4"/>
+      <rect x="262" y="158" width="8"   height="182" fill="#60a8d0" opacity="0.92"/>
+      <rect x="436" y="158" width="8"   height="182" fill="#60a8d0" opacity="0.92"/>
+      <rect x="202" y="212" width="250" height="8"   fill="#60a8d0" opacity="0.92"/>
+      <rect x="202" y="322" width="250" height="8"   fill="#60a8d0" opacity="0.92"/>
+      <rect x="276" y="162" width="152" height="44" rx="2" fill="#4e9ac8"/>
+      <rect x="276" y="292" width="152" height="46" rx="2" fill="#4e9ac8"/>
+      <rect x="207" y="226" width="50"  height="90" rx="2" fill="#4e9ac8" opacity="0.72"/>
+      <rect x="395" y="226" width="50"  height="90" rx="2" fill="#4e9ac8" opacity="0.72"/>
+      <circle cx="327" cy="251" r="20" fill="#4e9ac8" stroke="#3070a0" stroke-width="2"/>
+      <circle cx="327" cy="251" r="7"  fill="#285880"/>
+      <line x1="327" y1="232" x2="327" y2="240" stroke="#8acce8" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="308" y1="251" x2="316" y2="251" stroke="#8acce8" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="338" y1="251" x2="346" y2="251" stroke="#8acce8" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="327" y1="262" x2="327" y2="270" stroke="#8acce8" stroke-width="2.5" stroke-linecap="round"/>
+      <rect x="276" y="226" width="44" height="90" rx="2" fill="#9ed050" opacity="0.55"/>
+      <rect x="328" y="226" width="61" height="90" rx="2" fill="#9ed050" opacity="0.48"/>
+
+      <!-- Greek Theater -->
+      <path d="M390,52 Q462,30 534,52 L540,158 Q462,138 386,158 Z" fill="#c4b282" stroke="#8a6438" stroke-width="2.5"/>
+      <line x1="394" y1="70"  x2="532" y2="70"  stroke="#7a5630" stroke-width="0.9" opacity="0.5"/>
+      <line x1="392" y1="88"  x2="534" y2="88"  stroke="#7a5630" stroke-width="0.9" opacity="0.5"/>
+      <line x1="390" y1="106" x2="536" y2="106" stroke="#7a5630" stroke-width="0.9" opacity="0.5"/>
+      <line x1="390" y1="124" x2="536" y2="124" stroke="#7a5630" stroke-width="0.9" opacity="0.5"/>
+      <line x1="390" y1="142" x2="536" y2="142" stroke="#7a5630" stroke-width="0.9" opacity="0.5"/>
+      <rect x="438" y="154" width="52" height="16" rx="2" fill="#d4c090" stroke="#8a6438" stroke-width="1"/>
+
+      <!-- Colonnade -->
+      <rect x="452" y="154" width="58" height="8"  rx="1" fill="#b2a272"/>
+      <rect x="454" y="158" width="6"  height="28" rx="1" fill="#c4b282" stroke="#8a6438" stroke-width="0.8"/>
+      <rect x="466" y="158" width="6"  height="28" rx="1" fill="#c4b282" stroke="#8a6438" stroke-width="0.8"/>
+      <rect x="478" y="158" width="6"  height="28" rx="1" fill="#c4b282" stroke="#8a6438" stroke-width="0.8"/>
+      <rect x="490" y="158" width="6"  height="28" rx="1" fill="#c4b282" stroke="#8a6438" stroke-width="0.8"/>
+      <rect x="502" y="158" width="6"  height="28" rx="1" fill="#c4b282" stroke="#8a6438" stroke-width="0.8"/>
+
+      <!-- Temple of Love -->
+      <circle cx="122" cy="185" r="44" fill="#c4b282" stroke="#8a6438" stroke-width="1.5" opacity="0.42"/>
+      <circle cx="122" cy="185" r="35" fill="#d0bf92" stroke="#8a6438" stroke-width="3"/>
+      <circle cx="122" cy="185" r="22" fill="#c4b282" stroke="#8a6438" stroke-width="1.5"/>
+      <circle cx="122" cy="185" r="9"  fill="#b4a272" stroke="#8a6438" stroke-width="1"/>
+      <circle cx="122" cy="162" r="3.5" fill="#8a6438"/>
+      <circle cx="142" cy="169" r="3.5" fill="#8a6438"/>
+      <circle cx="149" cy="190" r="3.5" fill="#8a6438"/>
+      <circle cx="137" cy="208" r="3.5" fill="#8a6438"/>
+      <circle cx="107" cy="208" r="3.5" fill="#8a6438"/>
+      <circle cx="95"  cy="190" r="3.5" fill="#8a6438"/>
+      <circle cx="102" cy="169" r="3.5" fill="#8a6438"/>
+
+      <!-- Vista Terrace -->
+      <rect x="82" y="312" width="100" height="74" rx="4" fill="#c4b282" stroke="#8a6438" stroke-width="2"/>
+      <line x1="82" y1="329" x2="182" y2="329" stroke="#8a6438" stroke-width="0.8" opacity="0.42"/>
+      <line x1="82" y1="346" x2="182" y2="346" stroke="#8a6438" stroke-width="0.8" opacity="0.42"/>
+      <line x1="82" y1="363" x2="182" y2="363" stroke="#8a6438" stroke-width="0.8" opacity="0.42"/>
+      <line x1="82" y1="380" x2="182" y2="380" stroke="#8a6438" stroke-width="0.8" opacity="0.42"/>
+
+      <!-- Wisteria Pergola -->
+      <rect x="188" y="378" width="14" height="82" rx="2" fill="#a88858" stroke="#7a5e38" stroke-width="1.5"/>
+      <ellipse cx="195" cy="390" rx="12" ry="6" fill="#8858c0" opacity="0.78"/>
+      <ellipse cx="195" cy="405" rx="12" ry="6" fill="#7848b0" opacity="0.68"/>
+      <ellipse cx="195" cy="420" rx="12" ry="6" fill="#8858c0" opacity="0.78"/>
+      <ellipse cx="195" cy="435" rx="12" ry="6" fill="#7848b0" opacity="0.68"/>
+      <ellipse cx="195" cy="450" rx="12" ry="6" fill="#8858c0" opacity="0.72"/>
+
+      <!-- Entry Gates -->
+      <rect x="614" y="232" width="54" height="26" rx="2" fill="#d0bf92" stroke="#8a6438" stroke-width="2"/>
+      <rect x="614" y="224" width="8"  height="42" rx="2" fill="#a89068"/>
+      <rect x="660" y="224" width="8"  height="42" rx="2" fill="#a89068"/>
+      <line x1="612" y1="245" x2="592" y2="245" stroke="#8a6438" stroke-width="1.5" marker-end="url(#garr)"/>
+
+      <!-- Compass Rose -->
+      <g transform="translate(640,454)">
+        <circle cx="0" cy="0" r="17" fill="#d0bf92" stroke="#8a6438" stroke-width="1"/>
+        <polygon points="0,-13 -3.5,-5 3.5,-5" fill="#7a3010"/>
+        <polygon points="0,13 -3.5,5 3.5,5" fill="#a09080"/>
+        <line x1="-12" y1="0" x2="12" y2="0" stroke="#8a6438" stroke-width="0.8"/>
+        <text x="0" y="0" text-anchor="middle" dominant-baseline="central" font-size="8" font-weight="600" fill="#3a2010" font-family="sans-serif">N</text>
+      </g>
+
+      <!-- Road label -->
+      <text x="670" y="260" text-anchor="middle" font-size="9" fill="#4a3828" font-family="sans-serif" transform="rotate(90,670,260)">N Broadway</text>
+
+      <!-- Area labels -->
+      <text x="463" y="104" text-anchor="middle" font-size="9" fill="#5a4028" font-family="sans-serif" opacity="0.7">Greek Theater</text>
+      <text x="327" y="252" text-anchor="middle" dominant-baseline="central" font-size="8" fill="white" font-family="sans-serif" opacity="0.9">Walled Garden</text>
+      <text x="122" y="185" text-anchor="middle" dominant-baseline="central" font-size="8" fill="#3a2810" font-family="sans-serif">Temple</text>
+      <text x="131" y="348" text-anchor="middle" font-size="8.5" fill="#5a4028" font-family="sans-serif" opacity="0.75">Vista</text>
+      <text x="195" y="466" text-anchor="middle" font-size="8" fill="#5a4028" font-family="sans-serif" opacity="0.75">Pergola</text>
+      <text x="481" y="176" text-anchor="middle" font-size="8" fill="#5a4028" font-family="sans-serif" opacity="0.75">Colonnade</text>
+
+      <!-- Photo spot markers -->
+      <g class="mrkr" onclick="show(1)"><circle cx="594" cy="276" r="13" fill="#1e8a78" stroke="white" stroke-width="2.5"/><text x="594" y="276" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="white" font-family="sans-serif">1</text></g>
+      <g class="mrkr" onclick="show(2)"><circle cx="348" cy="188" r="13" fill="#1e8a78" stroke="white" stroke-width="2.5"/><text x="348" y="188" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="white" font-family="sans-serif">2</text></g>
+      <g class="mrkr" onclick="show(3)"><circle cx="383" cy="266" r="13" fill="#1e8a78" stroke="white" stroke-width="2.5"/><text x="383" y="266" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="white" font-family="sans-serif">3</text></g>
+      <g class="mrkr" onclick="show(4)"><circle cx="518" cy="208" r="13" fill="#1e8a78" stroke="white" stroke-width="2.5"/><text x="518" y="208" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="white" font-family="sans-serif">4</text></g>
+      <g class="mrkr" onclick="show(5)"><circle cx="462" cy="108" r="13" fill="#1e8a78" stroke="white" stroke-width="2.5"/><text x="462" y="108" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="white" font-family="sans-serif">5</text></g>
+      <g class="mrkr" onclick="show(6)"><circle cx="122" cy="233" r="13" fill="#1e8a78" stroke="white" stroke-width="2.5"/><text x="122" y="233" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="white" font-family="sans-serif">6</text></g>
+      <g class="mrkr" onclick="show(7)"><circle cx="130" cy="350" r="13" fill="#1e8a78" stroke="white" stroke-width="2.5"/><text x="130" y="350" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="white" font-family="sans-serif">7</text></g>
+      <g class="mrkr" onclick="show(8)"><circle cx="236" cy="418" r="13" fill="#1e8a78" stroke="white" stroke-width="2.5"/><text x="236" y="418" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="600" fill="white" font-family="sans-serif">8</text></g>
+
+      <!-- Easter egg markers -->
+      <g class="mrkr" onclick="showEgg(1)"><circle cx="565" cy="390" r="13" fill="#c87820" stroke="white" stroke-width="2.5"/><polygon points="0,-7 1.76,-2.43 6.66,-2.16 2.85,0.93 4.11,5.66 0,3 -4.11,5.66 -2.85,0.93 -6.66,-2.16 -1.76,-2.43" fill="white" transform="translate(565,390)"/></g>
+      <g class="mrkr" onclick="showEgg(2)"><circle cx="248" cy="344" r="13" fill="#c87820" stroke="white" stroke-width="2.5"/><polygon points="0,-7 1.76,-2.43 6.66,-2.16 2.85,0.93 4.11,5.66 0,3 -4.11,5.66 -2.85,0.93 -6.66,-2.16 -1.76,-2.43" fill="white" transform="translate(248,344)"/></g>
+    </svg>
+
+    <div id="infobox">
+      <p style="font-size:13px;color:#999;margin:0;width:100%;text-align:center;">Tap a marker on the map to reveal photography tips and hidden secrets</p>
+    </div>
+  </div>
+
+  <footer>Made with Claude &middot; Untermyer Gardens, 945 N Broadway, Yonkers NY &middot; Free &amp; open daily</footer>
+
+  <script>
+    const spots = {
+      1:{name:"Entry Gates & Grand Allee",icon:"🚪",tip:"The ornate iron gates and flanking stone pillars form a natural arch — put your couple centered in the gate for a classic framing, or shoot from the path looking up the allee as they walk toward you. The symmetrical approach lined with trees creates a powerful leading line.",bonus:"At golden hour the canopy above the allee glows amber. Arrive first — it gets busy. The gateposts also make great props for hands-and-laughing candids."},
+      2:{name:"Reflecting Pools — Persian Garden",icon:"💧",tip:"The long chahar-bagh canals are the garden's crown jewel for reflection shots. Shoot low and wide to capture couple plus mirror image in one frame. The geometric water channels give a dreamy, palatial quality impossible to find elsewhere in New York.",bonus:"Walk to the far end and shoot back toward the couple — perspective compression makes them feel nestled inside a grand architectural story. On still days the reflections are flawless."},
+      3:{name:"Central Fountain",icon:"⛲",tip:"The ornate fountain at the garden's heart is ringed by Moorish tilework and manicured beds. Use the stone basin as a foreground element for depth, or have your photographer shoot from the colonnade above looking down for a stunning aerial composition.",bonus:"Mid-morning light from the east catches the water jets and creates natural lens flare. The four compass-point jets create symmetrical framing lines around the couple."},
+      4:{name:"Greek Colonnade",icon:"🏛",tip:"The row of Greco-Roman columns flanking the walled garden casts dramatic raking light in late afternoon. Shoot between columns for a pillared-corridor portrait effect, or silhouette your couple against the bright garden beyond the columns.",bonus:"Late afternoon shadows from the columns become graphic leading lines across the stone path — try shooting the couple walking through the shadow stripes for an editorial look."},
+      5:{name:"Greek Theater / Amphitheater",icon:"🎭",tip:"The stone semicircular theater carved into the hillside is spectacular. Shoot from the circular stage looking up at the tiered stone seats, or place your couple on the top tier with the curved amphitheater sweeping below them. Ancient-world energy.",bonus:"Shakespeare in the Park runs here in summer — visit during a rehearsal for magical documentary-style shots of the space in use. The acoustics are also beautiful for vow readings."},
+      6:{name:"Temple of Love — Cliff Edge",icon:"🏺",tip:"A circular Greek-style pavilion sitting at the cliff's very edge with sweeping Hudson River views. Shoot from inside the columns framing outward — the river and Palisades fill the background. Sunrise light turns the stone columns warm amber.",bonus:"From the north side you can see the Palisades cliffs directly across the river. On clear days the view stretches miles — great for the tiny-couple-vast-world shot with a longer lens."},
+      7:{name:"Vista Terrace & Hudson Overlook",icon:"🌄",tip:"Terraced stone steps drop toward dramatic overlooks of the Hudson River. Silhouette your couple on the terrace edge at golden hour for cinematic results. The layered stone levels create a natural stage for candid portraits at different heights.",bonus:"On foggy mornings the river valley fills with mist — one of the most atmospheric settings in the Hudson Valley, and most photographers never find it. Arrive by 6am."},
+      8:{name:"Wisteria Pergola",icon:"💜",tip:"A wooden pergola draped in cascading wisteria in late April through May. The tunnel of purple blooms overhead creates a magical canopy unlike anything else in the region. Shoot from one end looking through for the full tunnel-of-flowers effect.",bonus:"Peak bloom is roughly April 25 to May 10 — plan around this. After peak bloom, fallen petals carpet the ground, a painterly element that works beautifully in its own right."}
+    };
+    const eggs = {
+      1:{name:"The Dark History",tip:"In the late 1970s, David Berkowitz (the Son of Sam killer) reportedly claimed a Satanic cult performed rituals in the wooded areas of this park. Some visitors have found cryptic carvings in old tree trunks in the northeast forest. Whether true or urban legend, it lends a gothic edge to shoots deep in the shadowy woodland paths — especially at dusk.",bonus:"The garden's layout has occult overtones: the Walled Garden's sacred geometry mirrors ancient Zoroastrian paradise design, and the fusion of Persian, Greek, Hindu, and Islamic symbolism hints at possible Masonic or Theosophist influence by the original designers."},
+      2:{name:"Hidden Moorish Tilework",tip:"At the base of the Walled Garden's interior walls, hand-laid geometric tiles in cobalt blue, turquoise, and white are easy to completely miss. Most photographers shoot wide and never notice them. Get low and close — they make extraordinary ring-portrait detail shots and add a jewel-like quality to macro compositions.",bonus:"Architect William Welles Bosworth (who also designed Kykuit for the Rockefellers) reportedly layered deliberate esoteric symbolism into the garden's geometry — each cultural design tradition is said to map to a different compass orientation."}
+    };
+
+    function show(n) {
+      const s = spots[n];
+      document.getElementById('infobox').innerHTML = `
+        <div style="width:100%">
+          <div class="spot-header">
+            <span style="font-size:17px">${s.icon}</span>
+            <span class="spot-title">${s.name}</span>
+            <span class="spot-badge badge-photo">Photo spot ${n}</span>
+          </div>
+          <p class="spot-tip">${s.tip}</p>
+          <p class="spot-bonus teal">Pro tip — ${s.bonus}</p>
+        </div>`;
+    }
+    function showEgg(n) {
+      const e = eggs[n];
+      document.getElementById('infobox').innerHTML = `
+        <div style="width:100%">
+          <div class="spot-header">
+            <span class="spot-title">Easter egg: ${e.name}</span>
+            <span class="spot-badge badge-egg">Hidden gem</span>
+          </div>
+          <p class="spot-tip">${e.tip}</p>
+          <p class="spot-bonus amber">Deeper context — ${e.bonus}</p>
+        </div>`;
+    }
+  </script>
+</body>
+</html>
